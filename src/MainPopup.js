@@ -7,7 +7,7 @@ const MainPopup = () => {
     const togglePopup = () => {
       setShowPopup(!showPopup);
     };
-  
+  console.log("hiiiii this from react");
     return (
       <div>
         <h1>React Popup Example</h1>
