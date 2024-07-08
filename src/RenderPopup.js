@@ -1,13 +1,13 @@
 import React from 'react'
-import Popup from './components/dic-popup/Popup'
+
 
 const RenderPopup = () => {
     console.log("hiiiiii iam here ");
     return (
-        
-        <React.Fragment>
-            <Popup />
-        </React.Fragment>
+        <div>
+            <h1 style={{color:'yellow',backgroundColor:'blue'}}>aleeeenaaaaaaaaa</h1>
+        </div>
+            
     )
 }
 
