@@ -1,36 +1,27 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
-class Popup extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isOpen: false  // Initially, the popup is closed
-    };
+const Popup = () => {
+  const [isOpen, setIsOpen] = useState(false);  // State to manage popup visibility
+
+  const togglePopup = () => {
+    setIsOpen(!isOpen);  // Toggles the isOpen state
   }
 
-  togglePopup = () => {
-    this.setState(prevState => ({
-      isOpen: !prevState.isOpen  // Toggles the isOpen state
-    }));
-  }
+  return (
+    <div className="popup-container">
+      <button onClick={togglePopup}>Open Popup</button>
 
-  render() {
-    return (
-      <div className="popup-container">
-        <button onClick={this.togglePopup}>Open Popup</button>
-
-        {this.state.isOpen && (
-          <div className="popup">
-            <div className="popup-content">
-              <h2>Popup Content</h2>
-              <p>This is the content of the popup.</p>
-              <button onClick={this.togglePopup}>Close</button>
-            </div>
+      {isOpen && (
+        <div className="popup">
+          <div className="popup-content">
+            <h2>Popup Content</h2>
+            <p>This is the content of the popup.</p>
+            <button onClick={togglePopup}>Close</button>
           </div>
-        )}
-      </div>
-    );
-  }
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default Popup;
