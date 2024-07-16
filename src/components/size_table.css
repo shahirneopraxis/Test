@@ -1,0 +1,36 @@
+.size-table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .size-table {
+    width: 50%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .size-table th, .size-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+  }
+  
+  .size-table th {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .size-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .size-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .size-table td {
+    font-size: 1em;
+  }
+  
